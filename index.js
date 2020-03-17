@@ -286,7 +286,8 @@ function save_html(container)
 		let params = {
 			Bucket: container.bucket,
 			Key: container.key + ".html",
-			Body: container.parsed.html
+			Body: container.parsed.html,
+			ACL: 'authenticated-read'
 		};
 
 		//
